@@ -1,19 +1,15 @@
 <?php
-/* DATOS DE UNA PELICULA */
+/* DATOS DE UN USUARIO */
 
-class Pelicula
+class Usuario
 {
-   private $codigo_pelicula;
+   private $id;
    private $nombre;
-   private $director;
-   private $genero;
-   private $imagen;
-   private $trailer;
-   private $mensajerror;
-  
-
-   
-   
+   private $password;
+   private $password2;
+   private $email;
+   private $plan;
+   private $mensajerror;  
    // Getter con método mágico
    public function __get($atributo){
        $class = get_class($this);
@@ -31,4 +27,3 @@ class Pelicula
    }
    
 }
-
