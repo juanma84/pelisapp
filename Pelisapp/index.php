@@ -14,16 +14,22 @@ ModeloUserDB::Init();
 // Versión sin POO no manejo de Clases ni objetos
 // Rutas en MODO PELICULAS
 $rutasPelis = [
-    "Inicio"      => "ctlPeliInicio",
-    "Alta"        => "ctlPeliAlta",
+    "Entrar"     =>"ctlPeliInicio",
+    "Registrarse"=> "ctlAltaUser",
+   
+    "Alta"        => "ctlPeliGuardar",
     "Detalles"    => "ctlPeliDetalles",
     "Modificar"   => "ctlPeliModificar",
+   
     "Borrar"      => "ctlPeliBorrar",
     "Cerrar"      => "ctlPeliCerrar",
+   
     "VerPelis"    => "ctlPeliVerPelis",
     "GuardarPeli" => "ctlPeliGuardar",
     "BuscarPeli"  => "ctlPeliBuscar",
     "FiltroPeli" => "ctlPeliFiltro"
+   
+    
 ];
 
 
@@ -44,7 +50,8 @@ if (isset($_GET['orden'])){
  }
  else 
  {
-            $procRuta = "ctlPeliVerPelis";
+            //$procRuta = "ctlPeliVerPelis";
+            $procRuta = "ctlPeliInicio";
  }
     
  
