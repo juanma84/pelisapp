@@ -1,9 +1,10 @@
 body {
-  background: silver;
+  
+  background-image: url("../img/fondocine.jpg");
   text-align: justify;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 14px;
-  color: #757E82;
+  color: rgb(0, 0, 0);
 }
 
 .izq{
@@ -13,7 +14,14 @@ body {
         text-align:right;
     }
 
+.error{
+    color:red;
+    font-style: italic;
+}
+
 #container {
+  
+  opacity:0.8;
   margin: 0 auto;
   width: 800px;
   background:#fff;
@@ -21,11 +29,16 @@ body {
 }
 
 #header {
+  background-color:rgb(255,0,0);
+  opacity:0.6;
   background: blue;
   text-align: center;
   padding: 20px;
   color: white;
   text-shadow: black 0.1em 0.1em 0.2em;
+  height: 20px;
+  background-image: linear-gradient(to bottom right,rgb(79, 170, 212), rgb(0, 0, 0)); /* Standard syntax (must be last) */
+  
 }
 
 #header h1 {
@@ -76,10 +89,33 @@ textarea {
    resize: none;
 }
 
+.boton {
+  border: 1px solid blue; 
+  padding: 2px; 
+  background-color: blue; 
+  color: #ffffff; 
+  text-decoration: none; 
+  text-transform: uppercase; 
+  font-family: Tahoma, Geneva, sans-serif; 
+  border-radius: 30px; 
+}
+input[type=submit]{
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+ 
 table, th, td {
-  border: 1px solid black; 
+  
+  border: 1px solid rgb(192, 7, 7); 
   border-collapse:collapse;
   padding: 4px;
+  
 }
 th {
 	background: silver;

@@ -16,7 +16,7 @@ $auto = $_SERVER['PHP_SELF'];
 				</div>
 				
 				<div class="form-group">
-					<label for="director" class="col-sm-2 control-label">DDirector</label>
+					<label for="director" class="col-sm-2 control-label">Director</label>
 					<div class="col-sm-10">
 						<input type="director" class="form-control" id="director" name="director" value="<?php echo $peli->director ?>" >
 					</div>
@@ -34,10 +34,14 @@ $auto = $_SERVER['PHP_SELF'];
 					<div class="col-sm-10">
 						<img id="imagen"  width="300" name="imagen" src="app/img/<?php echo $peli->imagen?>" >
 					</div>
+					<label for="trailer" class="col-sm-2 control-label">trailer</label>
+					<div class="col-sm-10"></br></br>
+					<iframe width="560" height="315" src="<?php echo $peli->trailer?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
 				</div>		
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<a href="index.php" class="btn btn-default">Regresar</a>
+						<a href="index.php?orden=VerPelis" class="boton">Regresar</a>
 					</div>
 				</div>
 			

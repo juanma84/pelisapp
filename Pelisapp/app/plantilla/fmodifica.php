@@ -6,16 +6,12 @@ ob_start();
 ?>
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
 <form name='ALTA' method="POST" action="index.php?orden=Modificar">
-ID Usuario : <input type="text" name="user" value="<?= $user ?>"  readonly> > <br>
+ID Usuario : <input type="text" name="user" value="<?= $user ?>"  readonly>  <br>
 Nombre     : <input type="text" name="nombre" value="<?= $nombre ?>"><br>
 Contraseña : <input type="password" id="clave1" name="clave1" value="<?= $clave1 ?>"><br>
 Repetir Contraseña : <input type="password" id="clave2" name="clave2" value="<?= $clave2 ?>"><br>
 Correo electrónico : <input type="email"    name="email" value ="<?= $email ?>" ><br>
-Estado <select name="estado">
-	<option value="A" <?= ($estado == "A")?"selected":"" ?> >Activo</option>
-	<option value="B" <?= ($estado == "B")?"selected":"" ?> >Bloqueado</option>
-	<option value="I" <?= ($estado == "I")?"selected":"" ?> >Inactivo</option>  
-</select>
+
 Plan <select name="plan">
 	<option value="0" <?= ($plan == "0")?"selected":""  ?> >Básico</option>
 	<option value="1" <?= ($plan == "1")?"selected":""  ?> >Profesional</option>

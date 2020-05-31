@@ -1,10 +1,11 @@
 /**
  * Funciones auxiliares de javascripts 
  */
-function confirmarBorrar(nombre,id){
-  if (confirm("¿Quieres eliminar el usuario:  "+nombre+"?"))
+function confirmarBorrar(nombre,codigo_pelicula){
+    
+  if (confirm("¿Quieres eliminar la pelicula:  "+nombre+"?"))
   {
-   document.location.href="?orden=Borrar&userid="+id;
+   document.location.href="index.php?orden=Borrar&codigo_pelicula="+codigo_pelicula;
   }
 }
 

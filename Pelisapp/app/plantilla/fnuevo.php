@@ -10,12 +10,8 @@ ID Usuario : <input type="text" name="user" value="<?= $user ?>" > <br>
 Nombre     : <input type="text" name="nombre" value="<?= $nombre ?>"><br>
 Contraseña : <input type="password" id="clave1" name="clave1" value="<?= $clave1 ?>"><br>
 Repetir Contraseña : <input type="password" id="clave2" name="clave2" value="<?= $clave2 ?>"><br>
-Correo electrónico : <input type="text"    name="email" value"<?= $email ?>" ><br>
-Estado <select name="estado">
-	<option value="A" selected="selected" >Activo</option>
-	<option value="B"                     >Bloqueado</option>
-	<option value="I"                     >Inactivo</option>  
-</select>
+Correo electrónico : <input type="text"    name="email" value="<?= $email ?>" ><br>
+
 Plan <select name="plan">
 	<option value="0" selected="selected">Básico</option>
 	<option value="1" >Profesional</option>

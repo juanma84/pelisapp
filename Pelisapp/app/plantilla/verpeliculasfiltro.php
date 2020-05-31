@@ -7,29 +7,38 @@ $auto = $_SERVER['PHP_SELF'];
 
 ?>
 
-
+<h3>PELICULAS ENCONTRADAS EN NUESTRA BASE DE DATOS</h3>
+<?php if(empty($peliculas)){
+    echo "Lo siento,película no incluida  en nuestra base de datos"."</br>";
+}else{?>
 <table>
-<th>Código</th><th>Nombre</th><th>Director</th><th>Genero</th>
-<?php foreach ($peliculas as $peli) : ?>
+
+<?php 
+echo "<th>Código</th><th>Nombre</th><th>Director</th><th>Genero</th>";
+
+
+     foreach ($peliculas as $peli) : ?>
 <tr>		
 <td><?= $peli->codigo_pelicula ?></td>
 <td><?= $peli->nombre ?></td>
 <td><?= $peli->director ?></td>
 <td><?= $peli->genero ?></td>
-<td><a href="#"  onclick="confirmarBorrar('<?= $peli->nombre?>','<?=$peli->codigo_pelicula?>');">Borrar</a></td>
+<td><a href="#"
+			onclick="confirmarBorrar('<?= $peli->nombre."','".$peli->codigo_pelicula."'"?>);">Borrar</a></td>
 <td><a href="<?= $auto?>?orden=Modificar&codigo=<?=$peli->codigo_pelicula?>">Modificar</a></td>
 <td><a href="<?= $auto?>?orden=Detalles&codigo=<?= $peli->codigo_pelicula?>">Detalles</a></td>
 </tr>
-<?php endforeach; ?>
+<?php endforeach;} ?>
 </table>
 <br>
-<form name='f2' action='index.php'>
-<input type='hidden' name='orden' value='Alta'> 
-<input type='submit' value='Nueva Película' >
+
 </form>
 <form name='f3' action='index.php'>
+
 <input type='hidden' name='orden' value='BuscarPeli'> 
-<input type='submit' value='Buscar Película' >
+<input type='submit' value='Buscar Película' ></br></br>
+<a href="index.php?orden=VerPelis" class="boton">Regresar</a>
+
 </form>
 <?php
 // Vacio el bufer y lo copio a contenido

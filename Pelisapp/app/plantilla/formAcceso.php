@@ -6,20 +6,18 @@
 $auto = $_SERVER['PHP_SELF'];
 ob_start();
 ?>
-<div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
 <div style="text-align:center">
+<span class='error'><?= $datos->mensajerror ?></span>
 <form name='ACCESO' method="POST" action="index.php">
    <p><a href=<?=$auto?>?orden=Registrarse > Darse de alta</a><p>
 	<table  style="margin-left:auto; margin-right:auto">
 		<tr>
 			<td>Usuario</td>
-			<td><input type="text" name="user"
-				value="<?= $user ?>"></td>
+			<td><input type="text" name="nombre" value="<?= $datos->nombre ?>"></td>
 		</tr>
 		<tr>
 			<td>Contraseña:</td>
-			<td><input type="password" name="clave"
-				value="<?= $clave ?>"></td>
+			<td><input type="password" name="password" value="<?= $datos->password ?>"></td>
 		</tr>
 	</table>
 	<input type="submit" name="orden" value="Entrar">

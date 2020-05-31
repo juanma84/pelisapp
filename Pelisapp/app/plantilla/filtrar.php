@@ -30,8 +30,9 @@ $auto = $_SERVER['PHP_SELF'];
 				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<a href="index.php" class="btn btn-default">Regresar</a>
 						<button type="submit" class="btn btn-primary">Filtrar</button>
+						</br></br>
+						<a href="index.php?orden=VerPelis" class="boton">Regresar</a>
 					</div>
 				</div>
 </form>
